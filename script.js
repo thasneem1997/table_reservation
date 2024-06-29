@@ -44,3 +44,45 @@ function applyBorder(event) {
 designOptions.forEach((option) => {
   option.addEventListener("click", applyBorder);
 });
+// code for create table in main page
+const form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const tableName = document.getElementById("tableName").value;
+  const noofSeats = document.getElementById("tableSeats").value;
+  const designType = document.querySelector(".tabletype .selected img").src;
+  createTablecard(tableName, designType, noofSeats);
+  form.reset();
+  closeModal();
+});
+
+function createTablecard(name, img, seats) {
+  const container = document.getElementById("tablecontainer");
+  const tableCard = document.createElement("div");
+  tableCard.className = "card";
+  const tablename = document.createElement("h3");
+  tablename.textContent = name;
+  const tabledesign = document.createElement("img");
+  tabledesign.src = img;
+  const seatCount = document.createElement("p");
+  seatCount.textContent = `Total seat:${seats} seat`;
+  const buttoncontainer = document.createElement("div");
+  buttoncontainer.className = "buttoncontainer";
+  const deleteButton = document.createElement("button");
+  deleteButton.className = "delete";
+  deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+  deleteButton.onclick = () => tableCard.remove();
+
+  const editButton = document.createElement("button");
+  editButton.className = "edit";
+  editButton.innerHTML = '<i class="fas fa-edit"></i>';
+  buttoncontainer.appendChild(deleteButton);
+  buttoncontainer.appendChild(editButton);
+  
+  tableCard.appendChild(tablename);
+
+  tableCard.appendChild(tabledesign);
+  tableCard.appendChild(seatCount);
+  container.appendChild(tableCard);
+  tableCard.appendChild(buttoncontainer);
+}
