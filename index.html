@@ -5,18 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table reservation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container">
-    <button>Add Table</button>
 
-</div>
-<div class="modal">
+    <div class="container">
+        <h1>Welcome to Our Event Table<br> Reservation System</h1><br>
+        <p>Organize and manage your event seating arrangements effortlessly.<br> Use our system to create, edit, and
+            view
+            table reservations in a simple and intuitive way.</p><br>
+        <button class="btn">Add Table</button>
 
-</div>
+    </div>
+    <div class="modal" style="display: none;">
 
-<script src="script.js"></script>
+        <form>
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <h2>Create Table</h2><br>
+                <div class="tablename">
+                    <label for="tableName">Table Name</label>
+                    <input type="text" id="tableName" name="tableName" placeholder="Table Name" required><br><br>
+                </div><br>
+                <div class="description"> <label for="description">Description</label>
+                    <textarea rows="4" cols="50" id="description" placeholder="Description"
+                        name="description"></textarea><br><br>
+                </div>
+
+
+                <label for="tableSeats" style="
+                margin-left: -51px;
+            ">No of Seats</label>
+                <div class="noofseat">
+                    <button class="btn1" type="button">+</button>
+                    <input type="text" name="tableSeats" id="tableSeats" value="8" min="1" readonly="" style="
+                     width: 60px;
+                     background-color: #ebf4f4;
+                      border: none;
+                      ">
+                    <button class="btn2" type="button">-</button>
+                </div><br><br><br>
+                <label for="tableType" style="
+                margin-left: -52px;
+            ">Table Design</label>
+                <div class="tabletype">
+                    <label id="tableDesign1"><img src="icons/design1.png"></label>
+
+                    <label id="tableDesign2"><img src="icons/design2.png"></label>
+
+
+                </div><br><br>
+
+                <button type="submit" class="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

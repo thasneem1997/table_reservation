@@ -1,0 +1,167 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60%;
+    margin: 120px;
+}
+
+.btn {
+    background-color: rgb(51, 109, 183);
+    padding: 16px;
+    margin: 26px 2px;
+    border: none;
+
+}
+
+form {
+    background-color: white;
+    border-radius: 7px;
+    margin: 14px 391px;
+
+}
+
+.modal-content {
+    padding-left: 206px;
+    padding-bottom: 10px;
+    margin-left: -85px;
+}
+
+.modal {
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+input[type="text"] {
+    width: 80%;
+    margin-top: 10px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.tablename {
+    display: flex;
+    flex-direction: column;
+    margin-left: -53px;
+    margin-top: -56px;
+
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    margin: 23px 47px;
+}
+
+textarea::placeholder {
+    padding: 10px;
+}
+
+.description {
+    display: flex;
+    margin-top: -80px;
+    margin-left: -55px;
+    flex-direction: column;
+
+}
+
+textarea {
+    width: 80%;
+
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit {
+    background-color: #336db7;
+    margin-left: -48px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 13px 188px;
+    color: white;
+
+}
+
+.close {
+    margin-left: 399px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+label {
+    margin-top: 60px;
+    font-weight: 700;
+
+}
+
+.btn1 {
+    padding: 7px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px 0px 0px 10px;
+    border-color: #4471e7;
+}
+
+.noofseat {
+    background-color: #ebf4f4;
+    margin-left: -51px;
+    width: 122px;
+    margin-top: 10px;
+    border-radius: 41px;
+    padding-top: -3px;
+}
+
+.tabletype img {
+    width: 73px;
+
+}
+
+.tabledesign2 {
+    margin-left: 29px;
+}
+
+.tabletype {
+    margin-top: -38px;
+    margin-left: -45px;
+}
+
+
+.btn2 {
+    padding: 7px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    border-color: #4471e7;
+    cursor: pointer;
+
+}
+
+.tabletype label {
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.tabletype label.selected {
+    border: solid 1px #77abd9;
+    padding: 10px;
+    border-radius: 10px;
+
+}
