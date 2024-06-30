@@ -383,11 +383,11 @@ button.edit {
 
     .submit {
         background-color: #336db7;
-        margin-left: -76px;
+        margin-left: -49px;
         border-radius: 5px;
         margin-bottom: 15px;
         border: none;
-        padding: 13px 158px;
+        padding: 12px 128px;
         color: white;
     }
 
@@ -450,7 +450,7 @@ button.edit {
         gap: 5px;
     }
 
-    
+
 
     .modal-content {
         position: fixed;
