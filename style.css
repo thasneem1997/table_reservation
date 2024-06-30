@@ -454,8 +454,10 @@ button.edit {
 
     .modal-content {
         position: fixed;
+        overflow: scroll;
         margin-left: -381px;
         width: 351px;
+        height: 657px;
         padding-left: 65px;
         background-color: white;
     }
