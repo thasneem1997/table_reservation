@@ -3,6 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
+}
+
+p {
+    font-size: 19px;
+    margin-top: 12px;
+}
+
+h1 {
+    font-size: 46px;
+    color: #26197e;
+    font-weight: 700;
 }
 
 .container {
@@ -12,27 +28,27 @@
 
 .btn {
     background-color: rgb(51, 109, 183);
+    color: white;
+    border-radius: 6px;
     padding: 16px;
     margin: 26px 2px;
     border: none;
-
 }
 
 form {
     background-color: white;
     border-radius: 7px;
     margin: 14px 391px;
-
 }
 
 .modal-content {
     padding-left: 206px;
     padding-bottom: 10px;
     margin-left: -85px;
+    padding-top: 13px;
 }
 
 .modal {
-
     position: fixed;
     z-index: 1;
     left: 0;
@@ -59,12 +75,12 @@ input[type="text"] {
     flex-direction: column;
     margin-left: -53px;
     margin-top: -56px;
-
 }
 
 .modal-content h2 {
     font-size: 32px;
-    margin: 23px 47px;
+    color: #19166b;
+    margin: 23px 55px;
 }
 
 textarea::placeholder {
@@ -76,12 +92,10 @@ textarea::placeholder {
     margin-top: -80px;
     margin-left: -55px;
     flex-direction: column;
-
 }
 
 textarea {
     width: 80%;
-
     margin-top: 10px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -96,7 +110,6 @@ textarea {
     border: none;
     padding: 13px 188px;
     color: white;
-
 }
 
 .close {
@@ -108,7 +121,6 @@ textarea {
 label {
     margin-top: 60px;
     font-weight: 700;
-
 }
 
 .btn1 {
@@ -130,7 +142,6 @@ label {
 
 .tabletype img {
     width: 73px;
-
 }
 
 .tabledesign2 {
@@ -142,14 +153,12 @@ label {
     margin-left: -45px;
 }
 
-
 .btn2 {
     padding: 7px;
     background-color: white;
     border-radius: 0px 10px 10px 0px;
     border-color: #4471e7;
     cursor: pointer;
-
 }
 
 .tabletype label {
@@ -163,17 +172,22 @@ label {
     border: solid 1px #77abd9;
     padding: 10px;
     border-radius: 10px;
-
 }
 
 .table-container {
     display: flex;
     flex-wrap: wrap;
-    margin: -75px 89px;
+    margin: -75px 87px;
     padding: 20px;
-
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 0px;
+}
+
+.table-container2 {
+    margin: -75px 284px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 137px;
 }
 
 .card {
@@ -209,8 +223,6 @@ label {
     color: #555;
 }
 
-
-
 .card .actions button {
     background-color: #f0f0f0;
     border: none;
@@ -242,4 +254,251 @@ button.edit {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+
+.table-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-weight: 800;
+    font-size: 1.7em;
+    padding: 20px;
+    text-align: center;
+}
+
+.round-table {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.square-table {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: -190px;
+    margin-top: -71px;
+}
+
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+#seatingArrangement {
+    display: contents;
+}
+
+.seat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.seat.assigned {
+    background-color: white;
+    color: #0f0e0e;
+    padding: 3px 38px;
+    border-radius: 27px;
+}
+
+.seat.not-assigned {
+    background-color: white;
+    color: #0f0e0e;
+    padding: 3px 38px;
+    border-radius: 5px;
+}
+
+.seat-number {
+    background-color: blue;
+    padding: 3px;
+    border-radius: 11px;
+    font-size: 0.75em;
+    color: #fffafa;
+    margin-top: 5px;
+}
+
+
+#seat1 {
+    grid-area: 1 / 3;
+}
+
+#seat2 {
+    grid-area: 2 / 1;
+}
+
+#seat3 {
+    grid-area: 2 / 5;
+}
+
+#seat4 {
+    grid-area: 3 / 1;
+}
+
+#seat5 {
+    grid-area: 3 / 5;
+}
+
+#seat6 {
+    grid-area: 4 / 1;
+}
+
+#seat7 {
+    grid-area: 4 / 5;
+}
+
+#seat8 {
+    grid-area: 5 / 3;
+}
+
+/* responsive code */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .table-container2 {
+        margin: 20px;
+    }
+
+    .submit {
+        background-color: #336db7;
+        margin-left: -76px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border: none;
+        padding: 13px 158px;
+        color: white;
+    }
+
+    .seats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 10px;
+    }
+
+    .close {
+        margin-left: 262px;
+    }
+
+    .modal-content h2 {
+        font-size: 31px;
+        color: #19166b;
+        margin: 23px -14px;
+    }
+
+    .round-table,
+    .square-table {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 76px;
+        margin-left: 10px;
+    }
+
+    p {
+        margin-left: 8px;
+        margin-top: 12px;
+
+    }
+
+    .btn {
+        margin: 26px 22px
+    }
+
+    form {
+        background-color: white;
+        border-radius: 7px;
+        margin: 14px 391px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .tabletype {
+        display: flex;
+        margin-top: -38px;
+        margin-left: -45px;
+        gap: 5px;
+    }
+
+    .modal {
+        background-color: white !important;
+    }
+
+    .modal-content {
+        margin-left: -214px;
+    }
+
+    .form {
+        margin: 16px 169px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .table-container2 {
+        margin: 10px;
+    }
+
+    .seats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 5px;
+    }
+
+    .round-table,
+    .square-table {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 76px;
+        margin-left: 10px;
+    }
+
+    p {
+        margin-left: 8px;
+        margin-top: 12px;
+
+    }
+
+    .btn {
+        margin: 26px 22px
+    }
 }

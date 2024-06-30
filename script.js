@@ -6,12 +6,14 @@ const modal = document.querySelector(".modal");
 function openModal() {
   modal.style.display = "block";
 }
+
 function closeModal() {
   modal.style.display = "none";
 }
 
 addButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
+
 // code for icon
 const increementIcon = document.querySelector(".btn1");
 const decrementIcon = document.querySelector(".btn2");
@@ -20,19 +22,22 @@ const currentValue = document.getElementById("tableSeats");
 function increementIconClick(event) {
   event.preventDefault();
   let integerValue = parseInt(currentValue.value, 10);
-  currentValue.value = integerValue + 1;
+  if (integerValue < 8) {
+    currentValue.value = integerValue + 4;
+  }
 }
 
 function decrementIconClick(event) {
   event.preventDefault();
   let integerValue = parseInt(currentValue.value, 10);
-  if (integerValue > 0) {
-    currentValue.value = integerValue - 1;
+  if (integerValue > 4) {
+    currentValue.value = integerValue - 4;
   }
 }
-increementIcon.addEventListener("click", increementIconClick);
 
+increementIcon.addEventListener("click", increementIconClick);
 decrementIcon.addEventListener("click", decrementIconClick);
+
 //  code for design icon
 const designOptions = document.querySelectorAll(".tabletype label");
 
@@ -44,6 +49,7 @@ function applyBorder(event) {
 designOptions.forEach((option) => {
   option.addEventListener("click", applyBorder);
 });
+
 // code for create table in main page
 const form = document.querySelector("form");
 form.addEventListener("submit", function (event) {
@@ -56,16 +62,16 @@ form.addEventListener("submit", function (event) {
   closeModal();
 });
 
-function createTablecard(name, img, seats) {
+function createTablecard(names, img, seats) {
   const container = document.getElementById("tablecontainer");
   const tableCard = document.createElement("div");
   tableCard.className = "card";
   const tablename = document.createElement("h3");
-  tablename.textContent = name;
+  tablename.textContent = names;
   const tabledesign = document.createElement("img");
   tabledesign.src = img;
   const seatCount = document.createElement("p");
-  seatCount.textContent = `Total seat:${seats} seat`;
+  seatCount.textContent = `Total seat: ${seats}`;
   const buttoncontainer = document.createElement("div");
   buttoncontainer.className = "buttoncontainer";
   const deleteButton = document.createElement("button");
@@ -78,9 +84,14 @@ function createTablecard(name, img, seats) {
   editButton.innerHTML = '<i class="fas fa-edit"></i>';
   buttoncontainer.appendChild(deleteButton);
   buttoncontainer.appendChild(editButton);
-  
-  tableCard.appendChild(tablename);
 
+  tableCard.appendChild(tablename);
+  tableCard.addEventListener("click", () => {
+    localStorage.setItem("tableName", names);
+    localStorage.setItem("tableSeats", seats);
+    localStorage.setItem("tableDesign", img);
+    window.location.href = "tabledetail.html";
+  });
   tableCard.appendChild(tabledesign);
   tableCard.appendChild(seatCount);
   container.appendChild(tableCard);
