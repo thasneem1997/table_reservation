@@ -294,6 +294,7 @@ button.edit {
     gap: 10px;
     padding: 20px;
     position: relative;
+    margin-left: 198px;
 }
 
 #seatingArrangement {
@@ -477,13 +478,17 @@ button.edit {
     .seats-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        padding: 5px;
+        padding: 6px 54px;
+        margin-top: 77px;
+        margin-left: -72px;
     }
 
     .round-table,
     .square-table {
-        width: 100px;
-        height: 100px;
+        width: 87px;
+        margin-left: 6px;
+        margin-top: -21px;
+        height: 92px;
     }
 
     h1 {
