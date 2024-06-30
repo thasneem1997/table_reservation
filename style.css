@@ -450,12 +450,14 @@ button.edit {
         gap: 5px;
     }
 
-    .modal {
-        background-color: white !important;
-    }
+    
 
     .modal-content {
-        margin-left: -214px;
+        position: fixed;
+        margin-left: -381px;
+        width: 351px;
+        padding-left: 65px;
+        background-color: white;
     }
 
     .form {
